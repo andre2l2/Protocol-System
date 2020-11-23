@@ -1,0 +1,31 @@
+div.info {
+    width: 80%;
+    height: 85%;
+
+    padding: 5% 10%;
+    background-color: var(--font-color);
+    border-radius: 5px;
+}
+
+div.info h1 {
+    font-size: 28px;
+
+    display: flex;
+}
+
+div.info h1 span {
+    margin-right: 15px;
+}
+
+div.info h1 span img {
+    width: 33px;
+    height: 33px;
+}
+
+div.info p {
+    margin-top: 15px;
+
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 200;
+}

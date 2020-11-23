@@ -1,0 +1,19 @@
+:root {
+    --background-color: #E5E5E5;
+    --button-color: #FCA311;
+    --button-hover: #f79800;
+    --menu-color: #14213D;
+    --font-color: #FFFFFF;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+}
