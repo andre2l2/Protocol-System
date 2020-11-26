@@ -14,8 +14,6 @@ server.get('/process', process.list);
 server.put('/process/:number/:year', process.filter);
 server.post('/process', process.create);
 
-server.post('/crate', )
-
 // Router loguin
 server.get('/login', users.list);
 server.put('/login/:user', users.filter);
