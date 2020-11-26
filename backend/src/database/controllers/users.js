@@ -33,12 +33,12 @@ module.exports = {
     async filter(req, res) {
         const filter = req.params;
 
-        const users = await connection('users')
+        const login = await connection('users')
             .select('*')
             .where({
                 user: `${filter.user}`
         })
 
-        return res.json(users);
+        return res.json(login);
     }
 }

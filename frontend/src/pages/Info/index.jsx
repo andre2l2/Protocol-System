@@ -14,7 +14,7 @@ import logoInfo from '../../icons/logoInfo.svg';
 function Info() {
     return (
         <Page>
-            <MenuLeft>
+            <MenuLeft className="menu">
                 <h2>
                     Sistema de protocolo
                 </h2>

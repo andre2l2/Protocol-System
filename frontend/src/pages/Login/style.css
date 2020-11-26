@@ -6,6 +6,17 @@
     align-items: center;
 }
 
+.menu h2 {
+    color: white;
+    font-weight: 300;
+}
+
+.menu button {
+    position: absolute;
+    top: 80%;
+    transform: translate(-50%);
+}
+
 .login h1 {
     position: absolute;
     top: 90px;

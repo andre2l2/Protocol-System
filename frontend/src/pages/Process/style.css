@@ -1,0 +1,8 @@
+.header h2 {
+    color: var(--font-color);
+    font-weight: 200;
+}
+
+.header a {
+    color: var(--font-color);
+}
