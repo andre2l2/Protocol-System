@@ -4,6 +4,9 @@ const server = express();
 
 const process = require('./database/controllers/process');
 const users = require('./database/controllers/users');
+const login = require('./database/controllers/login');
+
+const memory = require('./test/memory');
 
 // Setings express
 server.use(express.json());
@@ -14,9 +17,12 @@ server.get('/process', process.list);
 server.put('/process/:number/:year', process.filter);
 server.post('/process', process.create);
 
-// Router loguin
-server.get('/login', users.list);
-server.put('/login/:user', users.filter);
-server.post('/login', users.create);
+// Login user
+server.post('/login', login.list);
 
-server.listen('3333');  
+// Router loguin
+server.get('/user', users.list);
+server.put('/user/:user', users.filter);
+server.post('/user', users.create);
+
+server.listen('3333');

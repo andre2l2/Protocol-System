@@ -8,6 +8,7 @@ import Page from '../../components/Page';
 import Button from '../../components/Button';
 import MenuLeft from '../../components/MenuLeft';
 import Main from '../../components/Main';
+import Form from '../Form/Form';
 
 function Login() {
   return (
@@ -16,7 +17,8 @@ function Login() {
         <h2>Sistema de protocolo</h2>
         <Link to="/info">
           <Button
-            w="300px"
+            className="button"
+            w="80%"
             h="55px"
             fontSize="24px"
           >
@@ -31,23 +33,7 @@ function Login() {
       <Main className="login">
         <h1>Login</h1>
         <main>
-          <form action="/login" method="POST">
-            <label for="user">
-              Usuario:
-              <input type="text" name="user"/>
-            </label>
-            <label for="password">
-              Senha:
-              <input type="password" name="password"/>
-            </label>
-            <Button
-              w="198px"
-              h="48px"
-              fontSize="28px" 
-            > 
-              Entrar
-            </Button>
-          </form>
+          <Form />
         </main>
       </Main>
     </Page>

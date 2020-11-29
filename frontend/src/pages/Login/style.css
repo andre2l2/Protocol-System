@@ -6,9 +6,20 @@
     align-items: center;
 }
 
+.menu h2 {
+    color: white;
+    font-weight: 300;
+}
+
+.menu button {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+}
+
 .login h1 {
     position: absolute;
-    top: 90px;
+    top: 5%;
 
     font-size: 40px;
     margin-bottom: 20px;
@@ -52,4 +63,26 @@
 
     border-radius: 2px;
     outline: none;
+}
+
+@media (max-width: 860px) {
+    .menu .button {
+        position: absolute;
+        top: 85vh;
+        max-width: 80vw;
+    }
+}
+
+@media (max-width: 390px) {
+    .login h1 {
+
+    }
+
+    .login main {
+        width: 300px;
+    }
+
+    .login main input {
+        width: 260px;
+    }
 }

@@ -4,6 +4,7 @@
     --button-hover: #f79800;
     --menu-color: #14213D;
     --font-color: #FFFFFF;
+    --select-green: #40916C;
 }
 
 * {
@@ -12,6 +13,19 @@
     box-sizing: border-box;
 
     font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button, input {
+    border: none;
+    outline: none;
 }
 
 body {

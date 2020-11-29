@@ -14,21 +14,21 @@ import logoInfo from '../../icons/logoInfo.svg';
 function Info() {
     return (
         <Page>
-            <MenuLeft>
+            <MenuLeft className="menu">
                 <h2>
                     Sistema de protocolo
                 </h2>
 
                 <Link to="/login">
                     <Button
-                        w="300px"
+                        className="button"
+                        w="80%"
                         h="55px"
                         fontSize="24px"
                     >
                         Login
                     </Button>                
                 </Link>
-
             </MenuLeft>
 
             <Main>

@@ -5,6 +5,10 @@ const Page = styled.section`
     height: 100vh;
 
     display: flex;
+
+    @media (max-width: 860px) {
+        flex-direction: column;
+    }
 `
 
 export default Page;
