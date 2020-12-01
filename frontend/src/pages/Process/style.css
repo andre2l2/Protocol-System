@@ -1,85 +1,27 @@
-.header h2 {
-    color: var(--font-color);
-    font-weight: 200;
-}
 
-.header div {
-    width: 300px;
-    height: 100%;
-    margin-left: auto;
-
+.main .seach {
     display: flex;
 }
 
-.header a {
-    margin: 0 20px;
-    color: var(--font-color);
+.main .seach input {
+    width: 285px;
+    font-size: 20px;
+    padding-left: 5px;
+}
 
+.main .seach button {
+    margin-left: 10px;
+}
+
+.main .result {
     display: flex;
-    align-items: center;
+    margin-top: 15px;
 }
 
-.header img {
-    width: 26px;
-    height: 26px;
-}
+.main .result div {
+    height: 60vh;
+    width: 25vw;
+    margin: 0 5px;
 
-.header img:hover {
-    fill: blue;
-}
-
-.menuLeft h2 {
-    position: absolute;
-    top: 8px;
-    left: 50%;
-    z-index: 1;
-    transform: translate(-50%);
-
-    color: var(--font-color);
-    font-weight: 200;
-}
-
-.menuLeft hr {
-    position: absolute;
-    top: 45px;
-    left: 50%;
-    z-index: 1;
-    transform: translate(-50%);
-
-    width: 80%;
-    height: 3px;
-    border: none;
-    background-color: var(--background-color);
-}
-
-.menuLeft ul {
-    width: 90%;
-
-    position: absolute;
-    top: 10%;
-    left: 100%;
-    transform: translate(-100%, 0);
-    z-index: 1;
-}
-
-.menuLeft li {
-    margin: 6px 0;
-}
-
-.menuLeft a {
-    font-size: 15px;
-    color: var(--font-color);
-    font-weight: 200;
-}
-
-.menuLeft a:hover {
-    font-weight: bold;
-}
-
-.menuLeft .selected { 
-    font-weight: bold;
-}
-
-.menuLeft .unSelected {
-    font-weight: 200;
+    border: solid 2px var(--menu-color);
 }

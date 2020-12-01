@@ -6,20 +6,31 @@ import './global.css';
 import Login from './pages/Login';
 import Info from './pages/Info';
 import Process from './pages/Process';
+import Create from './pages/Create';
+import ExistentProcess from './pages/ExistentProcess';
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-        <Route path="/login" exact>
-          <Login />
-        </Route>
+
+      <Route path="/login" exact>
+        <Login />
+      </Route>
       <Route path="/info" exact>
         <Info />
       </Route>
-      <Route path="/process" exact>
+      <Route path="/process/" exact>
         <Process />
       </Route>
+      <Route path="/create/" exact>
+        <Create />
+      </Route>
+      <Route path="/existent/" exact>
+        <ExistentProcess />
+      </Route>
+
       <Redirect to="/login" />
+      
     </Switch>
   </BrowserRouter>,
   document.getElementById('root')
