@@ -17,7 +17,7 @@ function Process() {
 				<Menu />
 				<Main className="main">
 					<div className="seach">
-						<input type="text"/>
+						<input type="text" autoFocus="true"/>
 						<Button
 							w="135px"
 							h="45px"

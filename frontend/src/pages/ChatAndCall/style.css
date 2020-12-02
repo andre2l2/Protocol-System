@@ -1,0 +1,34 @@
+#main-chat {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-chat .main-info {
+    width: 75%;
+    height: 65%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    border-radius: 10px;
+    background-color: var(--font-color);
+}
+
+#main-chat .main-info p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+#main-chat .main-button {
+    flex-direction: column;
+}
+
+#main-chat .main-button button:last-child {
+    margin-top: 20px;
+}

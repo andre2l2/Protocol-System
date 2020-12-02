@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import chatImage from '../icons/chatImage.svg';
 import homeImage from '../icons/homeImage.svg';
@@ -40,7 +41,7 @@ const HeaderTop = ({ children }) => {
       background-color: var(--font-color);
 
       position: absolute;
-      top: 100%;
+      top: calc(100% - 3px);
     }
   `
 
@@ -72,15 +73,15 @@ const HeaderTop = ({ children }) => {
         <hr/>
       </NameArea>
       <Nav>
-        <a href="">
+        <Link to="/chatAndCall/">
           <img src={chatImage} alt="Chat"/>
-        </a>
-        <a href="">
+        </Link>
+        <Link to="/process/">
           <img src={homeImage} alt="Home"/>
-        </a>
-        <a href="">
+        </Link>
+        <Link to="/settings/">
           <img src={setingsImage} alt="Setings"/>
-        </a>
+        </Link>
       </Nav>
     </Header>
   )

@@ -1,6 +1,16 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+// This function get all links
+function getLinks() {
+  document.querySelectorAll('#getLinks li a')
+    .forEach((index, value) => {
+      if (value === 0) {
+        index.classList.add('selected');
+      }
+  });
+}
+
 const Menu = () => {
   const Nav = styled.nav`
     width: 400px;
@@ -33,21 +43,25 @@ const Menu = () => {
 
           cursor: pointer;
 
-          .selected {
-            font-weight: bold;
-          }
-
           &:hover {
             font-weight: bold;
           }
+
+          &:active {
+            font-weight: bold;
+          }
         }
+      }
+
+      .selected {
+        font-weight: bold;
       }
     }
   `
 
   return (  
     <Nav>
-      <ul>
+      <ul id="getLinks">
         <li>
           <Link to="/process/">Listagem de processos</Link>
         </li>

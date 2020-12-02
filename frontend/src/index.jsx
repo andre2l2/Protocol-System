@@ -8,6 +8,10 @@ import Info from './pages/Info';
 import Process from './pages/Process';
 import Create from './pages/Create';
 import ExistentProcess from './pages/ExistentProcess';
+import ChatAndCall from './pages/ChatAndCall';
+import SettingsPage from './pages/SettingsPage';
+import FeedBackChat from './pages/Feedback';
+import Chitchat from './pages/Chitchat';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -28,7 +32,19 @@ ReactDOM.render(
       <Route path="/existent/" exact>
         <ExistentProcess />
       </Route>
-
+      <Route path="/chatAndCall/" exact>
+        <ChatAndCall />
+      </Route>
+      <Route path="/chatAndCall/feedback/" exact>
+        <FeedBackChat />
+      </Route>
+      <Route path="/chatAndCall/chitchat/">
+        <Chitchat />
+      </Route>
+      <Route path="/settings/" exact>
+        <SettingsPage />
+      </Route>
+  
       <Redirect to="/login" />
       
     </Switch>
