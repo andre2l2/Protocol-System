@@ -25,7 +25,7 @@ function Form() {
         <form onSubmit={ formik.handleSubmit }>
             <label htmlFor="user">
                 Usuario:
-                <input type="text" name="user" onChange={ formik.handleChange } />
+                <input type="text" name="user" onChange={ formik.handleChange } autoFocus="true" />
             </label>
             <label htmlFor="password">
                 Password:

@@ -11,5 +11,5 @@
 
 ## Branch process 01/12
 - [] Create page ChatAndCall
-- [] Crate page Settings
+- [x] Crate page Settings
 - [x] Create feedback chat
