@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import Header from '../../components/Header';
 import Page from '../../components/Page';
+import SlideButton from '../../components/SlideButton';
 
 const SettingsPage = () => {
 
@@ -49,16 +50,13 @@ const SettingsPage = () => {
         <SettingsPage>
           <div>
             <label>
-              <input type="checkbox" />
-              Modo escuto
+              <SlideButton />
+              Modo escuro
             </label>
             <label>
-              <input type="checkbox"/>
+              <SlideButton />
               Modo com filtro
             </label>
-
-            {  }
-
           </div>
         </SettingsPage>
     </Page>

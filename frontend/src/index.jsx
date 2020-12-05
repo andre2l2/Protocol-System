@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Switch, Route, BrowserRouter, Redirect } from 'react-router-dom';
 
 import './global.css';
+
 import Login from './pages/Login';
 import Info from './pages/Info';
 import Process from './pages/Process';
@@ -12,6 +13,8 @@ import ChatAndCall from './pages/ChatAndCall';
 import SettingsPage from './pages/SettingsPage';
 import FeedBackChat from './pages/Feedback';
 import Chitchat from './pages/Chitchat';
+
+import SlideButton from './components/SlideButton';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -43,6 +46,9 @@ ReactDOM.render(
       </Route>
       <Route path="/settings/" exact>
         <SettingsPage />
+      </Route>
+      <Route path="/test/">
+        <SlideButton />
       </Route>
   
       <Redirect to="/login" />

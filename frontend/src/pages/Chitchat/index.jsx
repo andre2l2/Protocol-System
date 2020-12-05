@@ -1,8 +1,15 @@
 import React from 'react';
 
+import Page from '../../components/Page';
+import Chat from '../../components/Chat';
+import Header from '../../components/Header';
+
 function Chitchat() {
     return (
-        <h1>Chitchat</h1>
+        <Page>
+            <Header />
+            <Chat title="Atendente: name" />
+        </Page>
     )
 }
 
