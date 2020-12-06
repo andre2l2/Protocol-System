@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import React, { useState } from 'react';
 
 const SlideButton = () => {
   function addClick() {

@@ -5,8 +5,8 @@ import sendMensageIcon from '../icons/send-menssage.svg';
 const Chat = ({ title }) => {
   function sendMenssage() {
     const $inputMenssage = document.querySelector('#mensage-chat');
-    document.querySelector('#render-chat ul').innerHTML += `
-      <li>${$inputMenssage.value}</li>
+    document.querySelector('#render-chat').innerHTML += `
+      <p id="menssage">${$inputMenssage.value}</p>
     `
 
     $inputMenssage.value = '';
@@ -53,10 +53,21 @@ const Chat = ({ title }) => {
         }
       }
 
-      section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      #render-chat {
+        position: absolute;
+        width: 100%;
+
+        #menssage {
+          display: block;
+          position: relative;
+          top: 80%;
+          
+          text-align: end;
+          background-color: var(--menu-color);
+          color: var(--font-color);
+          padding: 10px;
+          border-radius: 15px 15px 0 15px;
+        }
       }
       
       footer {
@@ -105,9 +116,7 @@ const Chat = ({ title }) => {
           <h2>{ title }</h2>
         </header>
         <section id="render-chat">
-          <ul>
 
-          </ul>
         </section>
         <footer>
           <input type="text" id="mensage-chat" autoFocus="true"/>
