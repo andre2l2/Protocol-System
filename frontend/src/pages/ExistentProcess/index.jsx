@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import axios from 'axios';
 import { useFormik } from 'formik'
 
@@ -8,8 +9,6 @@ import Menu from '../../components/Menu';
 import Header from '../../components/Header';
 import Button from '../../components/Button';
 import LabelProcess from '../../components/LabalProcess';
-
-import './style.css';
 
 function ExistentProcess() {
   const formik = useFormik({
@@ -29,16 +28,56 @@ function ExistentProcess() {
       plus: ''
     },
     onSubmit: async (values) => {
-      // await axios.post('http://localhost:3333/process', values);
+      await axios.post('http://localhost:3333/process', values);
     }
   })
+
+  const MainFrom = styled.main`
+    width: 80%;
+
+    div {
+      display: flex;
+
+      label {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        padding: 5px;
+
+        input {
+          height: 35px;
+          font-size: 18px;
+          padding-left: 3px;
+          border-radius: 3px;
+        }
+      }
+    }
+
+    hr {
+      margin: 10px 0;
+      width: 100%;
+      height: 5px;
+      border: none;
+      background-color: var(--menu-color);
+    }
+
+    div:last-child {
+      margin-top: 20px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  `;
+
   return (
     <>
       <Header />
       <Page>
         <Menu/>
         <Main>
-          <main>
+          <MainFrom>
             <form onSubmit={ formik.handleSubmit }>
 
               <div>
@@ -131,7 +170,7 @@ function ExistentProcess() {
                 </Button>
               </div>
             </form>
-          </main>
+          </MainFrom>
         </Main>
       </Page>
     </>
