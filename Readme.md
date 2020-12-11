@@ -6,7 +6,7 @@
     <img src="./img/demo.gif">
 </p>
 
-### Tecnologias que foram usadas usadas:
+### Tecnologias que foram usadas:
 - __FrontEnd__
   - React
   - Axios
