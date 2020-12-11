@@ -28,7 +28,6 @@ function Create() {
       plus: ''
     },
     onSubmit: async (values) => {
-      console.log(values);
       await axios.post('http://localhost:3333/process', values)
     }
   })
@@ -43,12 +42,14 @@ function Create() {
         <Main>
           <main>
             <form onSubmit={ formik.handleSubmit } method="post">
+
               <div>
                 <label htmlFor="fullName">
                   Nome completo:
                   <input type="text" name="fullName" onChange={ formik.handleChange } />
                 </label>
               </div>
+
               <div>
                 <label htmlFor="CEP" >
                   CEP:
@@ -63,6 +64,7 @@ function Create() {
                   <input type="text" name="street" onChange={ formik.handleChange } />
                 </label>
               </div>
+
               <div>
                 <label htmlFor="house_number">
                   Numero:
@@ -73,7 +75,9 @@ function Create() {
                   <input type="text" name="complement" onChange={ formik.handleChange } />
                 </label>
               </div>
+
               <hr/>
+
               <div>
                 <label htmlFor="phone_1">
                   Telefone 1:
@@ -88,7 +92,9 @@ function Create() {
                   <input type="text" name="email" onChange={ formik.handleChange } />
                 </label>
               </div>
+
               <hr/>
+
               <div>
                 <label htmlFor="subject">
                   Assunto:
@@ -99,6 +105,7 @@ function Create() {
                   <input type="text" name="plus" onChange={ formik.handleChange } />
                 </label>
               </div>
+
               <div>
                 <Button
                   type="submit"
@@ -109,6 +116,7 @@ function Create() {
                   Cadastrar
                 </Button>
               </div>
+              
             </form>
           </main>
         </Main>

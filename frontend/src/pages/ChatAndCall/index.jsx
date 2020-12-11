@@ -1,17 +1,51 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 import Header from '../../components/Header';
 import Page from '../../components/Page';
 import Button from '../../components/Button';
 
-import './style.css';
-
 function FeedBackChat() {
+  const MainChat = styled.main`
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .main-info {
+      width: 75%;
+      height: 65%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      border-radius: 10px;
+      background-color: var(--font-color);
+
+      p {
+        text-align: center;
+        font-size: 24px;
+        font-weight: normal;
+      }
+    }
+
+    .main-button {
+      flex-direction: column;
+
+      button:last-child {
+        margin-top: 20px;
+      }
+    }
+  `
+
   return (
     <Page>
       <Header />
-      <main id="main-chat">
+      <MainChat>
         <div className="main-info">
           <p>
             Está área é destinada aos nossos usuáruos para que <br/>
@@ -39,7 +73,7 @@ function FeedBackChat() {
             </Link>
           </div>
         </div>
-      </main>
+      </MainChat>
     </Page>
   )
 }

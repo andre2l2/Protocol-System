@@ -8,11 +8,12 @@ import Main from '../../components/Main';
 import Menu from '../../components/Menu';
 import Header from '../../components/Header';
 import Button from '../../components/Button';
-import LabelProcess from '../../components/LabalProcess';
 
 function ExistentProcess() {
-  const formik = useFormik({
-    initialValues: {
+
+  const submetProcess = async () => {
+    const $process = document.querySelectorAll('#existent-process input');
+    const initialValues = {
       number: '',
       year: '',
       fullName: '',
@@ -26,30 +27,51 @@ function ExistentProcess() {
       email: '',
       subject: '',
       plus: ''
-    },
-    onSubmit: async (values) => {
-      await axios.post('http://localhost:3333/process', values);
     }
-  })
+
+    initialValues.number = $process[9].value;
+    initialValues.year = $process[10].value;
+    initialValues.fullName = $process[0].value;
+    initialValues.CEP = $process[1].value;
+    initialValues.district = $process[2].value;
+    initialValues.house_number = $process[3].value;
+    initialValues.complement = $process[4].value;
+    initialValues.complement = $process[5].value;
+    initialValues.phone_1 = $process[6].value;
+    initialValues.phone_2 = $process[7].value;
+    initialValues.email = $process[8].value;
+    initialValues.subject = $process[11].value;
+    initialValues.plus = $process[12].value;
+
+    await axios.post('http://localhost:3333/process', initialValues);
+
+    $process.forEach((input) => {
+      input.value = '';
+    })
+  }
 
   const MainFrom = styled.main`
     width: 80%;
 
-    div {
-      display: flex;
+    main {
+      width: 100%;
 
-      label {
+        div {
         display: flex;
-        flex-direction: column;
 
-        width: 100%;
-        padding: 5px;
+        label {
+          display: flex;
+          flex-direction: column;
 
-        input {
-          height: 35px;
-          font-size: 18px;
-          padding-left: 3px;
-          border-radius: 3px;
+          width: 100%;
+          padding: 5px;
+
+          input {
+            height: 35px;
+            font-size: 18px;
+            padding-left: 3px;
+            border-radius: 3px;
+          }
         }
       }
     }
@@ -78,41 +100,41 @@ function ExistentProcess() {
         <Menu/>
         <Main>
           <MainFrom>
-            <form onSubmit={ formik.handleSubmit }>
+            <main id="existent-process">
 
               <div>
                 <label htmlFor="fullName">
                   Nome completo:
-                  <input type="text" name="fullName" onChange={ formik.handleChange }/>
+                  <input type="text" name="fullName" />
                 </label>
               </div>
 
               <div>
                 <label htmlFor="CEP">
                   CEP:
-                  <input type="text" name="CEP" onChange={ formik.handleChange }/>
+                  <input type="text" name="CEP" />
                 </label>
                 
                 <label htmlFor="district">
                   Bairro:
-                  <input type="text" name="district" onChange={ formik.handleChange } />
+                  <input type="text" name="district"  />
                 </label>
 
                 <label htmlFor="street">
                   Rua:
-                  <input type="text" name="street" onChange={ formik.handleChange } />
+                  <input type="text" name="street"  />
                 </label>
               </div>
 
               <div>
                 <label htmlFor="house_number">
                   Numero:
-                  <input type="text" name="house_number" onChange={ formik.handleChange } />
+                  <input type="text" name="house_number"  />
                 </label>
 
                 <label htmlFor="complement">
                   Complemento:
-                  <input type="text" name="complement" onChange={ formik.handleChange } />
+                  <input type="text" name="complement"  />
                 </label>
               </div>
 
@@ -121,17 +143,17 @@ function ExistentProcess() {
               <div>
                 <label htmlFor="phone_1">
                   Telefone 1:
-                  <input type="text" name="phone_1" onChange={ formik.handleChange } />
+                  <input type="text" name="phone_1"  />
                 </label>
 
                 <label htmlFor="phone_2">
                   Telefone 2:
-                  <input type="text" name="phone_2" onChange={ formik.handleChange } />
+                  <input type="text" name="phone_2"  />
                 </label>
 
                 <label htmlFor="email">
                   Email:
-                  <input type="text" name="email" onChange={ formik.handleChange } />
+                  <input type="text" name="email"  />
                 </label>
               </div>
 
@@ -140,28 +162,30 @@ function ExistentProcess() {
               <div>
                 <label htmlFor="number">
                   Numero:
-                  <input type="text" name="number" onChange={ formik.handleChange } />
+                  <input type="text" name="number"  />
                 </label>
 
                 <label htmlFor="year">
                   Ano:
-                  <input type="text" name="year" onChange={ formik.handleChange } />
+                  <input type="text" name="year"  />
                 </label>
 
                 <label htmlFor="subject">
                   Assunto:
-                  <input type="text" name="subject" onChange={ formik.handleChange } />
+                  <input type="text" name="subject"  />
                 </label>
               </div>
 
               <div>
                 <label htmlFor="plus">
                   Mais:
-                  <input type="text" name="plus" onChange={ formik.handleChange } />
+                  <input type="text" name="plus"  />
                 </label>
               </div>
+
               <div>
                 <Button
+                  onClick={ submetProcess }
                   w="230px"
                   h="50px"
                   fontSize="22px"
@@ -169,7 +193,8 @@ function ExistentProcess() {
                   Cadastrar
                 </Button>
               </div>
-            </form>
+              
+            </main>
           </MainFrom>
         </Main>
       </Page>
