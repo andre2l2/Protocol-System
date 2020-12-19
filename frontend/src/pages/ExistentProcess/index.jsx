@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import { useFormik } from 'formik'
 
 import Page from '../../components/Page';
 import Main from '../../components/Main';
